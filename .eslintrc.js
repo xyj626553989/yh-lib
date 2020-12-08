@@ -28,7 +28,9 @@ module.exports = {
     "no-console": "error",
     "arrow-parens": 0,
     "no-use-before-define": 0,
-    "global-require": 0,
+    "import/extensions": 0,
+    "import/prefer-default-export": 0,
+    "import/no-unresolved": 0,
   },
   globals: {
     document: true,

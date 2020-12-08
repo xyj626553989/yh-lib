@@ -1,5 +1,6 @@
 {
   "git.ignoreLimitWarning": true,
+  "eslint.workingDirectories": [ "/src"],
   "search.exclude": {
     "**/node_modules": true,
     "dist": true,

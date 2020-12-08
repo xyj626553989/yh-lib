@@ -70,14 +70,21 @@
 
     /* Advanced Options */
     "skipLibCheck": true,
-    /* Skip type checking of declaration files. */
+ 
+
+    "declaration": true,
+    "declarationDir": "lib",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+ 
+    "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
-    /* Disallow inconsistently-cased references to the same file. */
+   
     "baseUrl": ".", // 解析非相对模块的基地址，默认是当前目录
     "paths": {
       // 路径映射，相对于baseUrl
       "@/*": ["./src/*"] //把@映射为src目录
     }
   },
-  "include": ["./src/**/*", "./components/**/*", "./lib/**/*"]
+  "include": ["./src/**/*"]
 }
