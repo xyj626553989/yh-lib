@@ -1,4 +1,2 @@
-body {
-  background-color: #fff; }
-  body div {
-    color: red; }
+div {
+  transform: translateX(20px); }

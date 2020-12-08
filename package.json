@@ -7,7 +7,9 @@
     "ts-build": "tsc -p tsconfig.build.json",
     "prettier": "prettier src  --write",
     "eslint": "eslint -c .eslintrc.json --ext .ts,.tsx,.js src --fix",
-    "css-build": "node-sass ./src/index.scss ./dist/index.css"
+    "css-build": "node-sass ./src/index.scss ./dist/index.css",
+    "clean": "rimraf dist",
+    "build": "npm run clean && npm run ts-build && npm run css-build"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +19,7 @@
     "@commitlint/config-conventional": "^11.0.0",
     "@typescript-eslint/eslint-plugin": "^4.9.1",
     "@typescript-eslint/parser": "^4.9.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.2.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^7.0.0",
@@ -27,7 +30,9 @@
     "husky": "^4.3.5",
     "lint-staged": "^10.5.3",
     "node-sass": "^5.0.0",
+    "postcss-loader": "^4.1.0",
     "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
     "sass": "^1.30.0",
     "sass-loader": "^10.1.0",
     "stylelint": "^13.8.0",
@@ -43,7 +48,8 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "autoprefixer": "^10.1.0"
   },
   "husky": {
     "hooks": {
@@ -61,5 +67,10 @@
     "src/**/*.{ts,tsx,js,json,html,yml,css,less,scss,md}": [
       "prettier --write"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
